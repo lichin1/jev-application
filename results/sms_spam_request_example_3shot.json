@@ -1,0 +1,42 @@
+{
+  "model": "jev-latest",
+  "state": {
+    "sms": "No need to buy lunch for me.. I eat maggi mee.."
+  },
+  "questions": {
+    "label": {
+      "type": "noul",
+      "instructions": "Is `sms` a spam text message?",
+      "criteria": {
+        "true": {
+          "description": "Unsolicited bulk or commercial message: prize or lottery claims, premium-rate numbers, marketing offers, subscription services, or scams.",
+          "examples": [
+            {
+              "sms": "Great NEW Offer - DOUBLE Mins & DOUBLE Txt on best Orange tariffs AND get latest camera phones 4 FREE! Call MobileUpd8 free on 08000839402 NOW! or 2stoptxt T&Cs"
+            },
+            {
+              "sms": "This is the 2nd time we have tried 2 contact u. U have won the 750 Pound prize. 2 claim is easy, call 08712101358 NOW! Only 10p per min. BT-national-rate"
+            },
+            {
+              "sms": "TheMob> Check out our newest selection of content, Games, Tones, Gossip, babes and sport, Keep your mobile fit and funky text WAP to 82468"
+            }
+          ]
+        },
+        "false": {
+          "description": "An ordinary personal or transactional message between people who know each other, including informal chat with slang or abbreviations.",
+          "examples": [
+            {
+              "sms": "Hey gals...U all wanna meet 4 dinner at nìte? "
+            },
+            {
+              "sms": "HELLO U.CALL WEN U FINISH WRK.I FANCY MEETIN UP WIV U ALL TONITE AS I NEED A BREAK FROM DABOOKS. DID 4 HRS LAST NITE+2 TODAY OF WRK!"
+            },
+            {
+              "sms": "No dude, its not fake..my frnds got money, thts y i'm reffering u..if u member wit my mail link, u vl be credited  &lt;#&gt; rs and il be getiing  &lt;#&gt; rs..i can draw my acc wen it is  &lt;#&gt; rs.."
+            }
+          ]
+        }
+      }
+    }
+  }
+}

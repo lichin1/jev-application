@@ -1,0 +1,63 @@
+{
+  "model": "jev-latest",
+  "state": {
+    "sms": "No need to buy lunch for me.. I eat maggi mee.."
+  },
+  "questions": {
+    "label": {
+      "type": "noul",
+      "instructions": "Is `sms` a spam text message?",
+      "criteria": {
+        "true": {
+          "description": "Unsolicited bulk or commercial message: prize or lottery claims, premium-rate numbers, marketing offers, subscription services, or scams.",
+          "examples": [
+            {
+              "sms": "URGENT! You have won a 1 week FREE membership in our £100,000 Prize Jackpot! Txt the word: CLAIM to No: 81010 T&C www.dbuk.net LCCLTD POBOX 4403LDNW1A7RW18"
+            },
+            {
+              "sms": "Someone U know has asked our dating service 2 contact you! Cant guess who? CALL 09058095107 NOW all will be revealed. POBox 7, S3XY 150p "
+            },
+            {
+              "sms": "Congrats 2 mobile 3G Videophones R yours. call 09063458130 now! videochat wid ur mates, play java games, Dload polypH music, noline rentl. bx420. ip4. 5we. 150p"
+            },
+            {
+              "sms": "2/2 146tf150p"
+            },
+            {
+              "sms": "HOT LIVE FANTASIES call now 08707509020 Just 20p per min NTT Ltd, PO Box 1327 Croydon CR9 5WB 0870..k"
+            }
+          ]
+        },
+        "false": {
+          "description": "An ordinary personal or transactional message between people who know each other, including informal chat with slang or abbreviations.",
+          "examples": [
+            {
+              "sms": "Nope but i'll b going 2 sch on fri quite early lor cos mys sis got paper in da morn :-)"
+            },
+            {
+              "sms": "Found it, ENC  &lt;#&gt; , where you at?"
+            },
+            {
+              "sms": "When you get free, call me"
+            },
+            {
+              "sms": "Good afternoon, my love. It was good to see your words on YM and get your tm. Very smart move, my slave ... *smiles* ... I drink my coffee and await you."
+            },
+            {
+              "sms": "Asking do u knw them or nt? May be ur frnds or classmates?"
+            },
+            {
+              "sms": "Call me when u're done..."
+            },
+            {
+              "sms": "Ok"
+            },
+            {
+              "sms": "Just wondering, the others just took off"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

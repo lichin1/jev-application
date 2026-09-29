@@ -1,0 +1,84 @@
+{
+  "model": "jev-latest",
+  "state": {
+    "article": "profits jump at china s top bank industrial and commercial bank (icbc)  china s biggest lender  has seen an 18% jump in profits during 2004.  the increase in earnings has allowed the firm to write off bad loans and pave the way for a state bailout and eventual stock-market listing. china is trying to clean up its banking system  which is weighed down by billions of dollars of unpaid loans. it has already pumped $45bn (£24bn) into two of its largest banks  and has identified icbc as a recipient of aid. icbc s profits were 74.7bn yuan ($9bn; £4.8bn) in 2004  the bank said in a statement. the percentage of non-performing loans dropped to 19.1%  down about 2 percentage points. icbc was founded in 1984 and had total assets of 5.3 trillion yuan at the end of 2003. china committed to gradually opening up its banking sector when it joined the world trade organisation in 2002."
+  },
+  "questions": {
+    "label": {
+      "type": "choice",
+      "instructions": "Which BBC News section does `article` belong to?",
+      "criteria": {
+        "business": {
+          "description": "Companies, markets, economy, trade, finance, jobs and prices.",
+          "examples": [
+            {
+              "article": "asia shares defy post-quake gloom thailand has become the first of the 10 southern asian nations battered by giant waves at the weekend to cut its economic forecast.  thailand s economy is now expected to grow by 5.7% in 2005  rather than 6% as forecast before tsunamis hit six tourist provinces. the full economic costs of the disaster remain unclear. in part  this is because of its scale  and because delivering aid and recovering the dead remain priorities. but indonesian  indian and hong kong stock markets reached record highs on wednesday  suggesting that investors do not fear a major econom …"
+            },
+            {
+              "article": "ford gains from finance not cars ford  the us car company  reported higher fourth quarter and full-year profits on thursday boosted by a buoyant period for its car loans unit.  net income for 2004 was $3.5bn (£1.87bn) - up nearly $3bn from 2003 - while turnover rose $7.2bn to $170.8bn. in the fourth quarter alone ford reported net income of $104m  compared with a loss of $793m a year ago. but its auto unit made a loss. fourth quarter turnover was $44.7bn  compared to $45.9bn a year ago.  though car and truck loan profits saved the day  ford s auto unit made a pre-tax loss of $470m in the fourt …"
+            },
+            {
+              "article": "christmas shoppers flock to tills shops all over the uk reported strong sales on the last saturday before christmas with some claiming record-breaking numbers of festive shoppers.  a spokesman for manchester s trafford centre said it was  the biggest christmas to date  with sales up 5%. and the regent street association said shops in central london were also expecting the  best christmas ever . that picture comes despite reports of disappointing festive sales in the last couple of weeks.  the trafford centre spokeswoman said about 8 500 thousand vehicles had arrived at the centre on saturday b …"
+            }
+          ]
+        },
+        "entertainment": {
+          "description": "Film, music, television, theatre, celebrities, awards and the arts.",
+          "examples": [
+            {
+              "article": "tarantino  to make friday sequel  director quentin tarantino is in talks to write and direct a new instalment in the friday the 13th horror franchise  according to the hollywood reporter.  the film-maker will reportedly meet executives from new line cinema this week to discuss the 12th film in the long-running  stalk and slash  series. the original film  released in 1980  has spawned ten sequels based around mask-wearing murderer jason voorhees. the most recent  freddy vs jason  was released in summer 2003. that film saw jason battle freddy krueger  star of the nightmare on elm street franchis …"
+            },
+            {
+              "article": "row threatens hendrix museum plan proposals to open a museum dedicated to jimi hendrix are flailing because of a row over the home of his late father.  the run-down house in seattle has already been moved wholesale once and local authorities are now demanding it be moved to another site. hendrix supporters hoped to turn the home into a museum for the guitarist.  the mayor is going to go down as the mayor who destroyed jimi hendrix s house   said ray rae marshall of the james marshall hendrix foundation. the foundation moved the building  in which al hendrix lived between 1953 and 1956  when th …"
+            },
+            {
+              "article": "poppins musical gets flying start the stage adaptation of children s film mary poppins has had its opening night in london s west end.  sir cameron mackintosh s lavish production  which has cost £9m to bring to the stage  was given a 10-minute standing ovation. lead actress laura michelle kelly soared over the heads of the audience holding the nanny s trademark umbrella. technical hitches had prevented mary poppins  flight into the auditorium during preview performances. a number of celebrities turned out for the musical s premiere  including actress barbara windsor  comic graham norton and si …"
+            },
+            {
+              "article": "the producers scoops stage awards the producers has beaten mary poppins in the battle of the blockbuster west end musicals at the olivier awards.  the producers won three prizes at the uk s most prestigious annual theatre awards  while mary poppins won two. mel brooks  hit show triumphed in the battle for best new musical  where it was up against mary poppins and andrew lloyd webber s the woman in white. alan bennett s the history boys was the big winner in the straight theatre categories  picking up three trophies. but all eyes were on the musical prizes after the producers  mary poppins and …"
+            }
+          ]
+        },
+        "politics": {
+          "description": "Government, parliament, parties, elections, ministers and public policy.",
+          "examples": [
+            {
+              "article": "concerns at school diploma plan final appeals are being made for the government not to ditch the reform plan for england s secondary schools put forward by the tomlinson report.  the government s response to the plan for a four-tier diploma to replace all existing 14-19 qualifications is expected next week. some are worried it could be scuppered if  as tony blair and ruth kelly have suggested  gcses and a-levels stay. sir mike tomlinson himself was briefed only this week. he is said to be feeling more comfortable about what the government is likely to say than if he had read only what was in n …"
+            },
+            {
+              "article": "eu fraud clampdown urged eu member states are failing to report fraud and irregularities in eu funds on a consistent basis  the uk s public spending watchdog has said.  the national audit office said although the latest figures showed reported fraud was falling  the eu still had no common definition of fraud. it also expressed concern that  for the 10th year  the european court of auditors had qualified the eu accounts. the nao urged the government to push for improvements in reporting fraud. it said member states needed to be more accountable on how money was spent. the report said:  member s …"
+            }
+          ]
+        },
+        "sport": {
+          "description": "Sports competitions, athletes, teams, matches and results.",
+          "examples": [
+            {
+              "article": "ireland win eclipses refereeing  errors  the international rugby board may have to step in to stop frustrated coaches and players from publicly haranguing referees when things go belly-up.  it may have to go the whole way and have nfl-style video cameras all over the field  or slap the vociferous perpetrators over the knuckles. what the irb does not want is a football scenario where the verbal slanging matches often overshadow the game itself. sunday s explosive six nations clash at lansdowne road was a good example as ireland took another step towards their first grand slam since 1948. the ga …"
+            },
+            {
+              "article": "hearts of oak 3-2 cotonsport hearts of oak set up an all ghanaian confederation cup final with a 3-2 win over cameroon s cotonsport garoua in accra on sunday.  the win for hearts means they will play asante kotoko in the two-leg final  after the kumasi team qualified from group a on saturday. in the other group b game cameroon s  beat  of south africa 3-2 in douala  neither side could have qualified for the final. hearts of oak started the game needing a win to qualify for the final while cotonsport only needed to avoid defeat to go through. louis agyemang scored the first two goals for hearts …"
+            },
+            {
+              "article": "iaaf awaits greek pair s response kostas kenteris and katerina thanou are yet to respond to doping charges from the international association of athletics federations (iaaf).  the greek pair were charged after missing a series of routine drugs tests in tel aviv  chicago and athens. they have until midnight on 16 december and an iaaf spokesman said:  we re sure their responses are on their way.  if they do not respond or their explanations are rejected  they will be provisionally banned from competition. they will then face a hearing in front of the greek federation  which will ultimately deter …"
+            }
+          ]
+        },
+        "tech": {
+          "description": "Technology, computing, the internet, gadgets, games, software and telecoms.",
+          "examples": [
+            {
+              "article": "hotspot users gain free net calls people using wireless net hotspots will soon be able to make free phone calls as well as surf the net.  wireless provider broadreach and net telephony firm skype are rolling out a service at 350 hotspots around the uk this week. users will need a skype account - downloadable for free - and they will then be able to make net calls via wi-fi without paying for net access. skype allows people to make free pc-based calls to other skype users.  users of the system can also make calls to landlines and mobiles for a fee. the system is gaining in popularity and now ha …"
+            },
+            {
+              "article": "mobiles  not media players yet  mobiles are not yet ready to be all-singing  all-dancing multimedia devices which will replace portable media players  say two reports.  despite moves to bring music download services to mobiles  people do not want to trade multimedia services with size and battery life  said jupiter. a separate study by gartner has also said real-time tv broadcasts to mobiles is  unlikely  in europe until 2007. technical issues and standards must be resolved first  said the report. batteries already have to cope with other services that operators offer  like video playback  vid …"
+            },
+            {
+              "article": "tv s future down the phone line internet tv has been talked about since the start of the web as we know it now.  but any early attempts to do it - the uk s home choice started in 1992 - were thwarted by the lack of a fast network. now that broadband networks are bedding down  and it is becoming essential for millions  the big telcos are keen to start shooting video down the line. in the face of competition from cable companies offering net voice calls  they are keen to be the top iptv dogs. software giant microsoft thinks iptv - internet protocol tv - is the future of television  and it sits n …"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

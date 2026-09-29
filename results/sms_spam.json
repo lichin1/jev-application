@@ -1,0 +1,307 @@
+{
+  "kaggle": "https://www.kaggle.com/datasets/uciml/sms-spam-collection-dataset",
+  "baseline": {
+    "model": "TF-IDF + Multinomial Naive Bayes",
+    "fit_seconds": 0.04,
+    "metrics": {
+      "n": 1115,
+      "accuracy": 0.9847533632286996,
+      "macro_f1": 0.9653896788023423,
+      "f1_positive": 0.9395017793594306,
+      "roc_auc": 0.9921908652576875
+    },
+    "full_test_metrics": {
+      "n": 1115,
+      "accuracy": 0.9847533632286996,
+      "macro_f1": 0.9653896788023423,
+      "f1_positive": 0.9395017793594306,
+      "roc_auc": 0.9921908652576875
+    }
+  },
+  "jev": {
+    "model": "jev-latest",
+    "shots": "0",
+    "errors": 0,
+    "metrics": {
+      "n": 1115,
+      "accuracy": 0.979372197309417,
+      "macro_f1": 0.9563210559931872,
+      "f1_positive": 0.9245901639344263,
+      "roc_auc": 0.991364097433546
+    },
+    "latency_p50_s": 0.291,
+    "latency_p95_s": 0.622,
+    "input_tokens_total": 417218
+  },
+  "pipeline": {
+    "problem": "Detect whether an SMS message is spam",
+    "n_scored": 1115,
+    "n_full_test": 1115,
+    "n_train": 4457,
+    "question_type": "Noul",
+    "question": "Is `sms` a spam text message?",
+    "answers": "yes / no",
+    "state_example": {
+      "sms": "No need to buy lunch for me.. I eat maggi mee.."
+    },
+    "state_example_label": "0"
+  },
+  "jev_3shot": {
+    "model": "jev-latest",
+    "shots": "3",
+    "errors": 0,
+    "examples_per_label": {
+      "0": 3,
+      "1": 3
+    },
+    "shot_train_rows": [
+      2118,
+      1427,
+      3042,
+      815,
+      2245,
+      4235
+    ],
+    "metrics": {
+      "n": 1115,
+      "accuracy": 0.9802690582959641,
+      "macro_f1": 0.9581044706782533,
+      "f1_positive": 0.9276315789473685,
+      "roc_auc": 0.9920484388678145
+    },
+    "latency_p50_s": 0.286,
+    "latency_p95_s": 0.508,
+    "input_tokens_total": 833113
+  },
+  "jev_cluster": {
+    "model": "jev-latest",
+    "shots": "cluster",
+    "errors": 0,
+    "examples_per_label": {
+      "0": 8,
+      "1": 5
+    },
+    "shot_train_rows": [
+      2784,
+      924,
+      256,
+      4227,
+      3231,
+      276,
+      307,
+      3669,
+      2397,
+      2375,
+      1513,
+      1214,
+      3574
+    ],
+    "clustering": {
+      "k": 8,
+      "silhouette": {
+        "2": 0.0198,
+        "3": 0.0269,
+        "4": 0.031,
+        "5": 0.0365,
+        "6": 0.0437,
+        "7": 0.047,
+        "8": 0.0478
+      },
+      "min_cell_size": 3,
+      "cells": [
+        {
+          "label": "0",
+          "cluster": 0,
+          "cell_size": 620,
+          "cluster_size": 622,
+          "label_share_of_cluster": 0.997,
+          "train_row": 2784
+        },
+        {
+          "label": "0",
+          "cluster": 1,
+          "cell_size": 192,
+          "cluster_size": 192,
+          "label_share_of_cluster": 1.0,
+          "train_row": 924
+        },
+        {
+          "label": "0",
+          "cluster": 2,
+          "cell_size": 51,
+          "cluster_size": 482,
+          "label_share_of_cluster": 0.106,
+          "train_row": 256
+        },
+        {
+          "label": "0",
+          "cluster": 3,
+          "cell_size": 367,
+          "cluster_size": 381,
+          "label_share_of_cluster": 0.963,
+          "train_row": 4227
+        },
+        {
+          "label": "0",
+          "cluster": 4,
+          "cell_size": 133,
+          "cluster_size": 185,
+          "label_share_of_cluster": 0.719,
+          "train_row": 3231
+        },
+        {
+          "label": "0",
+          "cluster": 5,
+          "cell_size": 2011,
+          "cluster_size": 2085,
+          "label_share_of_cluster": 0.965,
+          "train_row": 276
+        },
+        {
+          "label": "0",
+          "cluster": 6,
+          "cell_size": 184,
+          "cluster_size": 185,
+          "label_share_of_cluster": 0.995,
+          "train_row": 307
+        },
+        {
+          "label": "0",
+          "cluster": 7,
+          "cell_size": 301,
+          "cluster_size": 325,
+          "label_share_of_cluster": 0.926,
+          "train_row": 3669
+        },
+        {
+          "label": "1",
+          "cluster": 2,
+          "cell_size": 431,
+          "cluster_size": 482,
+          "label_share_of_cluster": 0.894,
+          "train_row": 2397
+        },
+        {
+          "label": "1",
+          "cluster": 3,
+          "cell_size": 14,
+          "cluster_size": 381,
+          "label_share_of_cluster": 0.037,
+          "train_row": 2375
+        },
+        {
+          "label": "1",
+          "cluster": 4,
+          "cell_size": 52,
+          "cluster_size": 185,
+          "label_share_of_cluster": 0.281,
+          "train_row": 1513
+        },
+        {
+          "label": "1",
+          "cluster": 5,
+          "cell_size": 74,
+          "cluster_size": 2085,
+          "label_share_of_cluster": 0.035,
+          "train_row": 1214
+        },
+        {
+          "label": "1",
+          "cluster": 7,
+          "cell_size": 24,
+          "cluster_size": 325,
+          "label_share_of_cluster": 0.074,
+          "train_row": 3574
+        }
+      ]
+    },
+    "metrics": {
+      "n": 1115,
+      "accuracy": 0.9802690582959641,
+      "macro_f1": 0.9581044706782533,
+      "f1_positive": 0.9276315789473685,
+      "roc_auc": 0.9892172801422875
+    },
+    "latency_p50_s": 0.292,
+    "latency_p95_s": 0.541,
+    "input_tokens_total": 988098
+  },
+  "jev_cluster_random": {
+    "model": "jev-latest",
+    "shots": "cluster-random",
+    "errors": 0,
+    "examples_per_label": {
+      "0": 8,
+      "1": 5
+    },
+    "shot_train_rows": [
+      2118,
+      1427,
+      3042,
+      2778,
+      4050,
+      3108,
+      1084,
+      3466,
+      815,
+      2245,
+      4235,
+      596,
+      1481
+    ],
+    "metrics": {
+      "n": 1115,
+      "accuracy": 0.9811659192825112,
+      "macro_f1": 0.9596730442330645,
+      "f1_positive": 0.9302325581395349,
+      "roc_auc": 0.9888038962302166
+    },
+    "latency_p50_s": 0.29,
+    "latency_p95_s": 0.468,
+    "input_tokens_total": 1117438
+  },
+  "stack": {
+    "stage2_train_rows": 2000,
+    "jev_missing": 0,
+    "stage2_weight": {
+      "kaggle": 1.892,
+      "jev": 3.073
+    },
+    "control_metrics": {
+      "n": 1115,
+      "accuracy": 0.9847533632286996,
+      "macro_f1": 0.9653896788023423,
+      "f1_positive": 0.9395017793594306,
+      "roc_auc": 0.9921908652576875
+    },
+    "metrics": {
+      "n": 1115,
+      "accuracy": 0.9919282511210762,
+      "macro_f1": 0.9823184580497268,
+      "f1_positive": 0.9692832764505119,
+      "roc_auc": 0.9938235580196478
+    }
+  },
+  "stack_cluster": {
+    "stage2_train_rows": 2000,
+    "jev_missing": 0,
+    "stage2_weight": {
+      "kaggle": 2.07,
+      "jev": 3.189
+    },
+    "control_metrics": {
+      "n": 1115,
+      "accuracy": 0.9865470852017937,
+      "macro_f1": 0.9696461530922811,
+      "f1_positive": 0.9469964664310954,
+      "roc_auc": 0.9921908652576875
+    },
+    "metrics": {
+      "n": 1115,
+      "accuracy": 0.9910313901345291,
+      "macro_f1": 0.9804105526508125,
+      "f1_positive": 0.9659863945578231,
+      "roc_auc": 0.9929828949379578
+    }
+  }
+}

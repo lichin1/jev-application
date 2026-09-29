@@ -1,0 +1,26 @@
+{
+  "model": "jev-latest",
+  "state": {
+    "passenger": {
+      "ticket_class": "3rd (lower)",
+      "sex": "male",
+      "title": "Mr",
+      "age_years": 24.0,
+      "siblings_or_spouses_aboard": 2,
+      "parents_or_children_aboard": 0,
+      "fare_paid_gbp": 24.15,
+      "has_recorded_cabin": false,
+      "port_of_embarkation": "Southampton"
+    }
+  },
+  "questions": {
+    "label": {
+      "type": "noul",
+      "instructions": "`passenger` describes a person aboard the RMS Titanic when it sank on 15 April 1912. Based on this profile and what is known about who reached the lifeboats, did this passenger survive?",
+      "criteria": {
+        "true": "The passenger survived the sinking.",
+        "false": "The passenger died in the sinking."
+      }
+    }
+  }
+}

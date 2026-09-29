@@ -1,0 +1,217 @@
+{
+  "kaggle": "https://www.kaggle.com/datasets/lakshmi25npathi/imdb-dataset-of-50k-movie-reviews",
+  "baseline": {
+    "model": "TF-IDF (1-2 gram) + Logistic Regression",
+    "fit_seconds": 22.64,
+    "metrics": {
+      "n": 10000,
+      "accuracy": 0.918,
+      "macro_f1": 0.9179985534944837,
+      "f1_positive": 0.9183429595698068,
+      "roc_auc": 0.9747282800000001
+    },
+    "full_test_metrics": {
+      "n": 10000,
+      "accuracy": 0.918,
+      "macro_f1": 0.9179985534944837,
+      "f1_positive": 0.9183429595698068,
+      "roc_auc": 0.9747282800000001
+    }
+  },
+  "jev": {
+    "model": "jev-latest",
+    "shots": "0",
+    "errors": 0,
+    "metrics": {
+      "n": 10000,
+      "accuracy": 0.9627,
+      "macro_f1": 0.9626996863043618,
+      "f1_positive": 0.9628078572140791,
+      "roc_auc": 0.9933430599999999
+    },
+    "latency_p50_s": 0.294,
+    "latency_p95_s": 0.445,
+    "input_tokens_total": 6230983
+  },
+  "pipeline": {
+    "problem": "Classify a movie review as positive or negative",
+    "n_scored": 10000,
+    "n_full_test": 10000,
+    "n_train": 40000,
+    "question_type": "Noul",
+    "question": "Is `review` a positive review overall, meaning the reviewer recommends the movie?",
+    "answers": "yes / no",
+    "state_example": {
+      "review": "Yes, MTV there really is a way to market Daria. What started as a clever teenage angst-\"comment on everything that sucks and make the viewer feel better about their sucky teenage life\" sitcom now mutated into a \"how you should deal with your problems\"-charade. I used to watch Daria all the time and loved it. Now, sitting here after watching the so called \"movie\" I can only wonder what the point of this all was. Daria tells us how to lead out life in college? Excuse me? didn't the point Daria made every episode that what you like to do is ok, as long as it is ok with yourself no matter what the rest of the sick sad world thinks of it? This entire thing reminded me of the scene in \"Reality Bites\" the movie channel shows the documentry for the first time."
+    },
+    "state_example_label": "0"
+  },
+  "jev_3shot": {
+    "model": "jev-latest",
+    "shots": "3",
+    "errors": 0,
+    "examples_per_label": {
+      "0": 3,
+      "1": 3
+    },
+    "shot_train_rows": [
+      13545,
+      37751,
+      24255,
+      38810,
+      8357,
+      25459
+    ],
+    "metrics": {
+      "n": 10000,
+      "accuracy": 0.9629,
+      "macro_f1": 0.9628998660685165,
+      "f1_positive": 0.9629703563229863,
+      "roc_auc": 0.99322994
+    },
+    "latency_p50_s": 0.294,
+    "latency_p95_s": 0.459,
+    "input_tokens_total": 14350983
+  },
+  "jev_cluster": {
+    "model": "jev-latest",
+    "shots": "cluster",
+    "errors": 0,
+    "examples_per_label": {
+      "0": 2,
+      "1": 2
+    },
+    "shot_train_rows": [
+      18794,
+      18301,
+      23292,
+      13424
+    ],
+    "clustering": {
+      "k": 2,
+      "silhouette": {
+        "2": 0.0242,
+        "3": 0.0208,
+        "4": 0.0139,
+        "5": 0.0164,
+        "6": 0.0157,
+        "7": 0.0172,
+        "8": 0.0168
+      },
+      "min_cell_size": 3,
+      "cells": [
+        {
+          "label": "0",
+          "cluster": 0,
+          "cell_size": 13669,
+          "cluster_size": 21925,
+          "label_share_of_cluster": 0.623,
+          "train_row": 18794
+        },
+        {
+          "label": "0",
+          "cluster": 1,
+          "cell_size": 6331,
+          "cluster_size": 18075,
+          "label_share_of_cluster": 0.35,
+          "train_row": 18301
+        },
+        {
+          "label": "1",
+          "cluster": 0,
+          "cell_size": 8256,
+          "cluster_size": 21925,
+          "label_share_of_cluster": 0.377,
+          "train_row": 23292
+        },
+        {
+          "label": "1",
+          "cluster": 1,
+          "cell_size": 11744,
+          "cluster_size": 18075,
+          "label_share_of_cluster": 0.65,
+          "train_row": 13424
+        }
+      ]
+    },
+    "metrics": {
+      "n": 10000,
+      "accuracy": 0.9625,
+      "macro_f1": 0.9624999156248102,
+      "f1_positive": 0.9625561657513729,
+      "roc_auc": 0.9932194200000001
+    },
+    "latency_p50_s": 0.292,
+    "latency_p95_s": 0.444,
+    "input_tokens_total": 12340983
+  },
+  "jev_cluster_random": {
+    "model": "jev-latest",
+    "shots": "cluster-random",
+    "errors": 0,
+    "examples_per_label": {
+      "0": 2,
+      "1": 2
+    },
+    "shot_train_rows": [
+      13545,
+      37751,
+      38810,
+      8357
+    ],
+    "metrics": {
+      "n": 10000,
+      "accuracy": 0.9633,
+      "macro_f1": 0.9632999174248142,
+      "f1_positive": 0.963354967548677,
+      "roc_auc": 0.99321792
+    },
+    "latency_p50_s": 0.3,
+    "latency_p95_s": 0.468,
+    "input_tokens_total": 11650983
+  },
+  "stack": {
+    "stage2_train_rows": 2000,
+    "jev_missing": 0,
+    "stage2_weight": {
+      "kaggle": 1.172,
+      "jev": 4.198
+    },
+    "control_metrics": {
+      "n": 10000,
+      "accuracy": 0.9183,
+      "macro_f1": 0.9182967571982932,
+      "f1_positive": 0.918811487627944,
+      "roc_auc": 0.9747282800000001
+    },
+    "metrics": {
+      "n": 10000,
+      "accuracy": 0.9644,
+      "macro_f1": 0.9643987183538607,
+      "f1_positive": 0.9646123260437376,
+      "roc_auc": 0.99446072
+    }
+  },
+  "stack_cluster": {
+    "stage2_train_rows": 2000,
+    "jev_missing": 0,
+    "stage2_weight": {
+      "kaggle": 0.942,
+      "jev": 4.108
+    },
+    "control_metrics": {
+      "n": 10000,
+      "accuracy": 0.9182,
+      "macro_f1": 0.9181970550939833,
+      "f1_positive": 0.9186878727634195,
+      "roc_auc": 0.9747282800000001
+    },
+    "metrics": {
+      "n": 10000,
+      "accuracy": 0.964,
+      "macro_f1": 0.9639989502093881,
+      "f1_positive": 0.9641933558782574,
+      "roc_auc": 0.9942849600000001
+    }
+  }
+}

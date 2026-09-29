@@ -1,0 +1,63 @@
+{
+  "model": "jev-latest",
+  "state": {
+    "sms": "No need to buy lunch for me.. I eat maggi mee.."
+  },
+  "questions": {
+    "label": {
+      "type": "noul",
+      "instructions": "Is `sms` a spam text message?",
+      "criteria": {
+        "true": {
+          "description": "Unsolicited bulk or commercial message: prize or lottery claims, premium-rate numbers, marketing offers, subscription services, or scams.",
+          "examples": [
+            {
+              "sms": "Great NEW Offer - DOUBLE Mins & DOUBLE Txt on best Orange tariffs AND get latest camera phones 4 FREE! Call MobileUpd8 free on 08000839402 NOW! or 2stoptxt T&Cs"
+            },
+            {
+              "sms": "This is the 2nd time we have tried 2 contact u. U have won the 750 Pound prize. 2 claim is easy, call 08712101358 NOW! Only 10p per min. BT-national-rate"
+            },
+            {
+              "sms": "TheMob> Check out our newest selection of content, Games, Tones, Gossip, babes and sport, Keep your mobile fit and funky text WAP to 82468"
+            },
+            {
+              "sms": "CDs 4u: Congratulations ur awarded £500 of CD gift vouchers or £125 gift guaranteed & Freeentry 2 £100 wkly draw xt MUSIC to 87066 TnCs www.ldew.com1win150ppmx3age16 "
+            },
+            {
+              "sms": "Think ur smart ? Win £200 this week in our weekly quiz, text PLAY to 85222 now!T&Cs WinnersClub PO BOX 84, M26 3UZ. 16+. GBP1.50/week"
+            }
+          ]
+        },
+        "false": {
+          "description": "An ordinary personal or transactional message between people who know each other, including informal chat with slang or abbreviations.",
+          "examples": [
+            {
+              "sms": "Hey gals...U all wanna meet 4 dinner at nìte? "
+            },
+            {
+              "sms": "HELLO U.CALL WEN U FINISH WRK.I FANCY MEETIN UP WIV U ALL TONITE AS I NEED A BREAK FROM DABOOKS. DID 4 HRS LAST NITE+2 TODAY OF WRK!"
+            },
+            {
+              "sms": "No dude, its not fake..my frnds got money, thts y i'm reffering u..if u member wit my mail link, u vl be credited  &lt;#&gt; rs and il be getiing  &lt;#&gt; rs..i can draw my acc wen it is  &lt;#&gt; rs.."
+            },
+            {
+              "sms": "It means u could not keep ur words."
+            },
+            {
+              "sms": "Oh... Okie lor...We go on sat... "
+            },
+            {
+              "sms": "K and you're sure I don't have to have consent forms to do it :V"
+            },
+            {
+              "sms": "Carlos is down but I have to pick it up from him, so I'll swing by usf in a little bit"
+            },
+            {
+              "sms": "So what u doing today?"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

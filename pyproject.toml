@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "jev-bench"
+version = "0.1.0"
+description = "Benchmark five classic Kaggle problems with TypeSafe's Jev model against classic Kaggle solutions"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "numpy>=1.26",
+    "pandas>=2.2",
+    "scikit-learn>=1.5",
+    "typesafe-sdk>=0.7.2",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+
+[project.scripts]
+jev-bench = "jev_bench.cli:main"
+
+[tool.setuptools]
+packages = ["jev_bench"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

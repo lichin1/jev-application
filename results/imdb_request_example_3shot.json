@@ -1,0 +1,42 @@
+{
+  "model": "jev-latest",
+  "state": {
+    "review": "Yes, MTV there really is a way to market Daria. What started as a clever teenage angst-\"comment on everything that sucks and make the viewer feel better about their sucky teenage life\" sitcom now mutated into a \"how you should deal with your problems\"-charade. I used to watch Daria all the time and loved it. Now, sitting here after watching the so called \"movie\" I can only wonder what the point of this all was. Daria tells us how to lead out life in college? Excuse me? didn't the point Daria made every episode that what you like to do is ok, as long as it is ok with yourself no matter what the rest of the sick sad world thinks of it? This entire thing reminded me of the scene in \"Reality Bites\" the movie channel shows the documentry for the first time."
+  },
+  "questions": {
+    "label": {
+      "type": "noul",
+      "instructions": "Is `review` a positive review overall, meaning the reviewer recommends the movie?",
+      "criteria": {
+        "true": {
+          "description": "Overall positive: the reviewer liked the movie, even if they mention some flaws.",
+          "examples": [
+            {
+              "review": "Although Kurt Russell was and is probably the closest person to look like Elvis in show-business, so many things were false in this film. First of all, the makers claimed Elvis opened his famous live shows in '69 after a 9 year hault for films by wearing a white jump-suit made in 1972. Also they claimed he sang 'burning love' which he first sung in 1972 and 'the wonder of you' which he first recorded in 1970. They also claim that he got his first guitar for christmas when all Elvis fans know he got it for his birthday. I know all movies based on past have something false but these things are s …"
+            },
+            {
+              "review": "If you like animal movies, this movie will please. My wife likes animals and animal movies, she especially like the parrot in this film. It is geared towards kids, but I laughed at most of the humor. The French fashion character made me laugh, and adds balance to the script. It is a Disney film, with its sappy, happily, family apeal, but I like leaving the theater with a positive fealing."
+            },
+            {
+              "review": "The 08th MS team features two hopeful romantics from different sides of the conflict. Aina, the Zeon officer, and Shiro, the Federal Forces' new pilot, meet in a battle in space, throughout the 12 episode series (and one \"movie\") the two debate their love for each other while trying to come to grips with the war that surrounds them. It features a Romeo and Juliet romance and unbeatable animation. By far one of the best to hit American Shores. Suit Up!"
+            }
+          ]
+        },
+        "false": {
+          "description": "Overall negative: the reviewer disliked the movie, even if they mention some good points.",
+          "examples": [
+            {
+              "review": "No. Just NO. That's all that needs to be said.  Summary: A random guy is in a cornfield. For some reason, I'm not sure, but it's his duty to run around inside. The next great thriller?  A five year old could make a better movie just filming an anthill, or even just grass growing. Seriously.....  You can't say it has bad acting, because there is NO acting. You can't say it has bad writing, because it has NO writing. You can't say it has bad cinematography, because there is NO cinematography. You can't say it's a bad movie, BECAUSE THERE IS NO MOVIE! If you don't believe me, go watch it. Just do …"
+            },
+            {
+              "review": "Why oh why don't blockbuster movies simply stick to their selling point? Everyone in the cinema, young and old, was there to see talking animals make jokes, and whilst they did that we were all happy... And then, as with Lost In Space, came the two killer blows - plot and sentiment. Who really cared what happened to the tiger or whether Eddie Murphy made up with his daughter? Not me, that's for sure."
+            },
+            {
+              "review": "I wasn't expecting this to be a great movie, but neither was I expecting it to be so awful. I hated the mother character so much I had to turn the channel. I turned it back, hoping it was just one part of the movie, but no. And for the daughter to sit there take being embarrassed, or almost done out of a job, or driven to madness inside her own home? Are you kidding me? I was raised to respect (and even fear) my mother but I'd put her up fast in the nearest hotel if she proved that annoying in MY house. I was expected to follow a set of rules in my mother's house, after all.  I didn't buy any …"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

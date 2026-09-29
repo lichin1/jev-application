@@ -1,0 +1,112 @@
+{
+  "model": "jev-latest",
+  "state": {
+    "passenger": {
+      "ticket_class": "3rd (lower)",
+      "sex": "male",
+      "title": "Mr",
+      "age_years": 24.0,
+      "siblings_or_spouses_aboard": 2,
+      "parents_or_children_aboard": 0,
+      "fare_paid_gbp": 24.15,
+      "has_recorded_cabin": false,
+      "port_of_embarkation": "Southampton"
+    }
+  },
+  "questions": {
+    "label": {
+      "type": "noul",
+      "instructions": "`passenger` describes a person aboard the RMS Titanic when it sank on 15 April 1912. Based on this profile and what is known about who reached the lifeboats, did this passenger survive?",
+      "criteria": {
+        "true": {
+          "description": "The passenger survived the sinking.",
+          "examples": [
+            {
+              "passenger": {
+                "ticket_class": "1st (upper)",
+                "sex": "female",
+                "title": "Miss",
+                "age_years": 58.0,
+                "siblings_or_spouses_aboard": 0,
+                "parents_or_children_aboard": 0,
+                "fare_paid_gbp": 146.52,
+                "has_recorded_cabin": true,
+                "port_of_embarkation": "Cherbourg"
+              }
+            },
+            {
+              "passenger": {
+                "ticket_class": "3rd (lower)",
+                "sex": "female",
+                "title": "Miss",
+                "age_years": 4.0,
+                "siblings_or_spouses_aboard": 0,
+                "parents_or_children_aboard": 2,
+                "fare_paid_gbp": 22.02,
+                "has_recorded_cabin": false,
+                "port_of_embarkation": "Southampton"
+              }
+            },
+            {
+              "passenger": {
+                "ticket_class": "1st (upper)",
+                "sex": "female",
+                "title": "Mlle",
+                "age_years": 24.0,
+                "siblings_or_spouses_aboard": 0,
+                "parents_or_children_aboard": 0,
+                "fare_paid_gbp": 69.3,
+                "has_recorded_cabin": true,
+                "port_of_embarkation": "Cherbourg"
+              }
+            }
+          ]
+        },
+        "false": {
+          "description": "The passenger died in the sinking.",
+          "examples": [
+            {
+              "passenger": {
+                "ticket_class": "3rd (lower)",
+                "sex": "male",
+                "title": "Mr",
+                "age_years": 38.0,
+                "siblings_or_spouses_aboard": 0,
+                "parents_or_children_aboard": 0,
+                "fare_paid_gbp": 7.05,
+                "has_recorded_cabin": false,
+                "port_of_embarkation": "Southampton"
+              }
+            },
+            {
+              "passenger": {
+                "ticket_class": "3rd (lower)",
+                "sex": "male",
+                "title": "Mr",
+                "age_years": 51.0,
+                "siblings_or_spouses_aboard": 0,
+                "parents_or_children_aboard": 0,
+                "fare_paid_gbp": 7.75,
+                "has_recorded_cabin": false,
+                "port_of_embarkation": "Southampton"
+              }
+            },
+            {
+              "passenger": {
+                "ticket_class": "3rd (lower)",
+                "sex": "female",
+                "title": "Miss",
+                "age_years": null,
+                "siblings_or_spouses_aboard": 8,
+                "parents_or_children_aboard": 2,
+                "fare_paid_gbp": 69.55,
+                "has_recorded_cabin": false,
+                "port_of_embarkation": "Southampton"
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}

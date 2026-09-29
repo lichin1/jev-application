@@ -1,0 +1,217 @@
+{
+  "kaggle": "https://www.kaggle.com/datasets/uciml/iris",
+  "baseline": {
+    "model": "StandardScaler + Logistic Regression",
+    "fit_seconds": 0.01,
+    "metrics": {
+      "n": 30,
+      "accuracy": 0.9333333333333333,
+      "macro_f1": 0.9333333333333332
+    },
+    "full_test_metrics": {
+      "n": 30,
+      "accuracy": 0.9333333333333333,
+      "macro_f1": 0.9333333333333332
+    }
+  },
+  "jev": {
+    "model": "jev-latest",
+    "shots": "0",
+    "errors": 0,
+    "metrics": {
+      "n": 30,
+      "accuracy": 0.6,
+      "macro_f1": 0.49350649350649345
+    },
+    "latency_p50_s": 0.349,
+    "latency_p95_s": 0.734,
+    "input_tokens_total": 11910,
+    "accuracy_when_confidence_ge_0.8": 1.0,
+    "share_confidence_ge_0.8": 0.3333333333333333
+  },
+  "pipeline": {
+    "problem": "Identify the iris species from 4 flower measurements",
+    "n_scored": 30,
+    "n_full_test": 30,
+    "n_train": 120,
+    "question_type": "Choice",
+    "question": "`flower_measurements_cm` are measurements of one iris flower. Which species is it?",
+    "answers": "setosa / versicolor / virginica",
+    "state_example": {
+      "flower_measurements_cm": {
+        "sepal_length": 4.4,
+        "sepal_width": 3.0,
+        "petal_length": 1.3,
+        "petal_width": 0.2
+      }
+    },
+    "state_example_label": "setosa"
+  },
+  "jev_3shot": {
+    "model": "jev-latest",
+    "shots": "3",
+    "errors": 0,
+    "examples_per_label": {
+      "setosa": 3,
+      "versicolor": 3,
+      "virginica": 3
+    },
+    "shot_train_rows": [
+      54,
+      48,
+      47,
+      64,
+      53,
+      51,
+      57,
+      46,
+      43
+    ],
+    "metrics": {
+      "n": 30,
+      "accuracy": 0.9,
+      "macro_f1": 0.8976982097186701
+    },
+    "latency_p50_s": 0.281,
+    "latency_p95_s": 0.581,
+    "input_tokens_total": 27300,
+    "accuracy_when_confidence_ge_0.8": 0.9565217391304348,
+    "share_confidence_ge_0.8": 0.7666666666666667
+  },
+  "jev_cluster": {
+    "model": "jev-latest",
+    "shots": "cluster",
+    "errors": 0,
+    "examples_per_label": {
+      "setosa": 1,
+      "versicolor": 2,
+      "virginica": 2
+    },
+    "shot_train_rows": [
+      70,
+      88,
+      74,
+      84,
+      46
+    ],
+    "clustering": {
+      "k": 3,
+      "silhouette": {
+        "3": 0.4861,
+        "4": 0.4166,
+        "5": 0.3479,
+        "6": 0.3194,
+        "7": 0.3381,
+        "8": 0.3323
+      },
+      "min_cell_size": 3,
+      "cells": [
+        {
+          "label": "setosa",
+          "cluster": 1,
+          "cell_size": 40,
+          "cluster_size": 40,
+          "label_share_of_cluster": 1.0,
+          "train_row": 70
+        },
+        {
+          "label": "versicolor",
+          "cluster": 0,
+          "cell_size": 5,
+          "cluster_size": 31,
+          "label_share_of_cluster": 0.161,
+          "train_row": 88
+        },
+        {
+          "label": "versicolor",
+          "cluster": 2,
+          "cell_size": 35,
+          "cluster_size": 49,
+          "label_share_of_cluster": 0.714,
+          "train_row": 74
+        },
+        {
+          "label": "virginica",
+          "cluster": 0,
+          "cell_size": 26,
+          "cluster_size": 31,
+          "label_share_of_cluster": 0.839,
+          "train_row": 84
+        },
+        {
+          "label": "virginica",
+          "cluster": 2,
+          "cell_size": 14,
+          "cluster_size": 49,
+          "label_share_of_cluster": 0.286,
+          "train_row": 46
+        }
+      ]
+    },
+    "metrics": {
+      "n": 30,
+      "accuracy": 0.9666666666666667,
+      "macro_f1": 0.9665831244778613
+    },
+    "latency_p50_s": 0.286,
+    "latency_p95_s": 0.57,
+    "input_tokens_total": 20940,
+    "accuracy_when_confidence_ge_0.8": 1.0,
+    "share_confidence_ge_0.8": 0.8
+  },
+  "jev_cluster_random": {
+    "model": "jev-latest",
+    "shots": "cluster-random",
+    "errors": 0,
+    "examples_per_label": {
+      "setosa": 1,
+      "versicolor": 2,
+      "virginica": 2
+    },
+    "shot_train_rows": [
+      54,
+      64,
+      53,
+      57,
+      46
+    ],
+    "metrics": {
+      "n": 30,
+      "accuracy": 0.8333333333333334,
+      "macro_f1": 0.8283298826777088
+    },
+    "latency_p50_s": 0.277,
+    "latency_p95_s": 0.591,
+    "input_tokens_total": 20940,
+    "accuracy_when_confidence_ge_0.8": 0.9565217391304348,
+    "share_confidence_ge_0.8": 0.7666666666666667
+  },
+  "stack": {
+    "stage2_train_rows": 120,
+    "jev_missing": 0,
+    "control_metrics": {
+      "n": 30,
+      "accuracy": 0.9666666666666667,
+      "macro_f1": 0.9665831244778612
+    },
+    "metrics": {
+      "n": 30,
+      "accuracy": 0.9666666666666667,
+      "macro_f1": 0.9665831244778612
+    }
+  },
+  "stack_cluster": {
+    "stage2_train_rows": 115,
+    "jev_missing": 0,
+    "control_metrics": {
+      "n": 30,
+      "accuracy": 0.9666666666666667,
+      "macro_f1": 0.9665831244778612
+    },
+    "metrics": {
+      "n": 30,
+      "accuracy": 1.0,
+      "macro_f1": 1.0
+    }
+  }
+}

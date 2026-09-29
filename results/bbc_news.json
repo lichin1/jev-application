@@ -1,0 +1,322 @@
+{
+  "kaggle": "https://www.kaggle.com/competitions/learn-ai-bbc",
+  "baseline": {
+    "model": "TF-IDF + Linear SVM",
+    "fit_seconds": 0.45,
+    "metrics": {
+      "n": 445,
+      "accuracy": 0.9865168539325843,
+      "macro_f1": 0.9861360064818323
+    },
+    "full_test_metrics": {
+      "n": 445,
+      "accuracy": 0.9865168539325843,
+      "macro_f1": 0.9861360064818323
+    }
+  },
+  "jev": {
+    "model": "jev-latest",
+    "shots": "0",
+    "errors": 0,
+    "metrics": {
+      "n": 445,
+      "accuracy": 0.9820224719101124,
+      "macro_f1": 0.9822070759191694
+    },
+    "latency_p50_s": 0.293,
+    "latency_p95_s": 0.567,
+    "input_tokens_total": 407340,
+    "accuracy_when_confidence_ge_0.8": 0.992822966507177,
+    "share_confidence_ge_0.8": 0.9393258426966292
+  },
+  "pipeline": {
+    "problem": "Assign a BBC News article to one of 5 sections",
+    "n_scored": 445,
+    "n_full_test": 445,
+    "n_train": 1780,
+    "question_type": "Choice",
+    "question": "Which BBC News section does `article` belong to?",
+    "answers": "business / entertainment / politics / sport / tech",
+    "state_example": {
+      "article": "profits jump at china s top bank industrial and commercial bank (icbc)  china s biggest lender  has seen an 18% jump in profits during 2004.  the increase in earnings has allowed the firm to write off bad loans and pave the way for a state bailout and eventual stock-market listing. china is trying to clean up its banking system  which is weighed down by billions of dollars of unpaid loans. it has already pumped $45bn (£24bn) into two of its largest banks  and has identified icbc as a recipient of aid. icbc s profits were 74.7bn yuan ($9bn; £4.8bn) in 2004  the bank said in a statement. the percentage of non-performing loans dropped to 19.1%  down about 2 percentage points. icbc was founded in 1984 and had total assets of 5.3 trillion yuan at the end of 2003. china committed to gradually opening up its banking sector when it joined the world trade organisation in 2002."
+    },
+    "state_example_label": "business"
+  },
+  "jev_3shot": {
+    "model": "jev-latest",
+    "shots": "3",
+    "errors": 0,
+    "examples_per_label": {
+      "business": 3,
+      "entertainment": 3,
+      "politics": 3,
+      "sport": 3,
+      "tech": 3
+    },
+    "shot_train_rows": [
+      308,
+      920,
+      1127,
+      1695,
+      65,
+      351,
+      163,
+      1634,
+      427,
+      704,
+      561,
+      498,
+      984,
+      788,
+      1150
+    ],
+    "metrics": {
+      "n": 445,
+      "accuracy": 0.9775280898876404,
+      "macro_f1": 0.9775881397610645
+    },
+    "latency_p50_s": 0.304,
+    "latency_p95_s": 0.615,
+    "input_tokens_total": 1412595,
+    "accuracy_when_confidence_ge_0.8": 0.9928057553956835,
+    "share_confidence_ge_0.8": 0.9370786516853933
+  },
+  "jev_cluster": {
+    "model": "jev-latest",
+    "shots": "cluster",
+    "errors": 0,
+    "examples_per_label": {
+      "business": 3,
+      "entertainment": 4,
+      "politics": 2,
+      "sport": 3,
+      "tech": 3
+    },
+    "shot_train_rows": [
+      873,
+      618,
+      866,
+      885,
+      937,
+      1032,
+      699,
+      108,
+      302,
+      147,
+      1276,
+      931,
+      467,
+      1251,
+      500
+    ],
+    "clustering": {
+      "k": 8,
+      "silhouette": {
+        "5": 0.0713,
+        "6": 0.0724,
+        "7": 0.0779,
+        "8": 0.0816
+      },
+      "min_cell_size": 3,
+      "cells": [
+        {
+          "label": "business",
+          "cluster": 2,
+          "cell_size": 14,
+          "cluster_size": 345,
+          "label_share_of_cluster": 0.041,
+          "train_row": 873
+        },
+        {
+          "label": "business",
+          "cluster": 4,
+          "cell_size": 12,
+          "cluster_size": 331,
+          "label_share_of_cluster": 0.036,
+          "train_row": 618
+        },
+        {
+          "label": "business",
+          "cluster": 5,
+          "cell_size": 381,
+          "cluster_size": 391,
+          "label_share_of_cluster": 0.974,
+          "train_row": 866
+        },
+        {
+          "label": "entertainment",
+          "cluster": 0,
+          "cell_size": 102,
+          "cluster_size": 103,
+          "label_share_of_cluster": 0.99,
+          "train_row": 885
+        },
+        {
+          "label": "entertainment",
+          "cluster": 1,
+          "cell_size": 195,
+          "cluster_size": 199,
+          "label_share_of_cluster": 0.98,
+          "train_row": 937
+        },
+        {
+          "label": "entertainment",
+          "cluster": 2,
+          "cell_size": 4,
+          "cluster_size": 345,
+          "label_share_of_cluster": 0.012,
+          "train_row": 1032
+        },
+        {
+          "label": "entertainment",
+          "cluster": 4,
+          "cell_size": 7,
+          "cluster_size": 331,
+          "label_share_of_cluster": 0.021,
+          "train_row": 699
+        },
+        {
+          "label": "politics",
+          "cluster": 2,
+          "cell_size": 326,
+          "cluster_size": 345,
+          "label_share_of_cluster": 0.945,
+          "train_row": 108
+        },
+        {
+          "label": "politics",
+          "cluster": 5,
+          "cell_size": 5,
+          "cluster_size": 391,
+          "label_share_of_cluster": 0.013,
+          "train_row": 302
+        },
+        {
+          "label": "sport",
+          "cluster": 3,
+          "cell_size": 113,
+          "cluster_size": 113,
+          "label_share_of_cluster": 1.0,
+          "train_row": 147
+        },
+        {
+          "label": "sport",
+          "cluster": 6,
+          "cell_size": 147,
+          "cluster_size": 147,
+          "label_share_of_cluster": 1.0,
+          "train_row": 1276
+        },
+        {
+          "label": "sport",
+          "cluster": 7,
+          "cell_size": 149,
+          "cluster_size": 151,
+          "label_share_of_cluster": 0.987,
+          "train_row": 931
+        },
+        {
+          "label": "tech",
+          "cluster": 1,
+          "cell_size": 4,
+          "cluster_size": 199,
+          "label_share_of_cluster": 0.02,
+          "train_row": 467
+        },
+        {
+          "label": "tech",
+          "cluster": 4,
+          "cell_size": 310,
+          "cluster_size": 331,
+          "label_share_of_cluster": 0.937,
+          "train_row": 1251
+        },
+        {
+          "label": "tech",
+          "cluster": 5,
+          "cell_size": 4,
+          "cluster_size": 391,
+          "label_share_of_cluster": 0.01,
+          "train_row": 500
+        }
+      ]
+    },
+    "metrics": {
+      "n": 445,
+      "accuracy": 0.9820224719101124,
+      "macro_f1": 0.982007203051501
+    },
+    "latency_p50_s": 0.302,
+    "latency_p95_s": 0.586,
+    "input_tokens_total": 1372990,
+    "accuracy_when_confidence_ge_0.8": 0.9928400954653938,
+    "share_confidence_ge_0.8": 0.9415730337078652
+  },
+  "jev_cluster_random": {
+    "model": "jev-latest",
+    "shots": "cluster-random",
+    "errors": 0,
+    "examples_per_label": {
+      "business": 3,
+      "entertainment": 4,
+      "politics": 2,
+      "sport": 3,
+      "tech": 3
+    },
+    "shot_train_rows": [
+      308,
+      920,
+      1127,
+      1695,
+      65,
+      351,
+      364,
+      163,
+      1634,
+      704,
+      561,
+      498,
+      984,
+      788,
+      1150
+    ],
+    "metrics": {
+      "n": 445,
+      "accuracy": 0.9752808988764045,
+      "macro_f1": 0.9754351084363222
+    },
+    "latency_p50_s": 0.298,
+    "latency_p95_s": 0.627,
+    "input_tokens_total": 1416155,
+    "accuracy_when_confidence_ge_0.8": 0.9928057553956835,
+    "share_confidence_ge_0.8": 0.9370786516853933
+  },
+  "stack": {
+    "stage2_train_rows": 1780,
+    "jev_missing": 0,
+    "control_metrics": {
+      "n": 445,
+      "accuracy": 0.9865168539325843,
+      "macro_f1": 0.9861360064818323
+    },
+    "metrics": {
+      "n": 445,
+      "accuracy": 0.9887640449438202,
+      "macro_f1": 0.9885909146502027
+    }
+  },
+  "stack_cluster": {
+    "stage2_train_rows": 1765,
+    "jev_missing": 0,
+    "control_metrics": {
+      "n": 445,
+      "accuracy": 0.9865168539325843,
+      "macro_f1": 0.9861360064818323
+    },
+    "metrics": {
+      "n": 445,
+      "accuracy": 0.9910112359550561,
+      "macro_f1": 0.9905625151715993
+    }
+  }
+}

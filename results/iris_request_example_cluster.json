@@ -1,0 +1,74 @@
+{
+  "model": "jev-latest",
+  "state": {
+    "flower_measurements_cm": {
+      "sepal_length": 4.4,
+      "sepal_width": 3.0,
+      "petal_length": 1.3,
+      "petal_width": 0.2
+    }
+  },
+  "questions": {
+    "label": {
+      "type": "choice",
+      "instructions": "`flower_measurements_cm` are measurements of one iris flower. Which species is it?",
+      "criteria": {
+        "setosa": {
+          "description": "Iris setosa",
+          "examples": [
+            {
+              "flower_measurements_cm": {
+                "sepal_length": 5.1,
+                "sepal_width": 3.4,
+                "petal_length": 1.5,
+                "petal_width": 0.2
+              }
+            }
+          ]
+        },
+        "versicolor": {
+          "description": "Iris versicolor",
+          "examples": [
+            {
+              "flower_measurements_cm": {
+                "sepal_length": 6.7,
+                "sepal_width": 3.1,
+                "petal_length": 4.7,
+                "petal_width": 1.5
+              }
+            },
+            {
+              "flower_measurements_cm": {
+                "sepal_length": 5.8,
+                "sepal_width": 2.7,
+                "petal_length": 3.9,
+                "petal_width": 1.2
+              }
+            }
+          ]
+        },
+        "virginica": {
+          "description": "Iris virginica",
+          "examples": [
+            {
+              "flower_measurements_cm": {
+                "sepal_length": 6.9,
+                "sepal_width": 3.2,
+                "petal_length": 5.7,
+                "petal_width": 2.3
+              }
+            },
+            {
+              "flower_measurements_cm": {
+                "sepal_length": 5.8,
+                "sepal_width": 2.7,
+                "petal_length": 5.1,
+                "petal_width": 1.9
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}
