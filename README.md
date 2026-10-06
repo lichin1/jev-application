@@ -85,15 +85,30 @@ jev_bench/
   cli.py            命令列介面（jev-bench）
 tests/              離線測試：用永遠答對的假 Jev 跑完整 pipeline
 results/            每題的結果（<task>.json）、範例請求、報告 summary.md
+docs/               架構圖與模組設計圖
 ```
 
-資料流：
+整體架構：從指令入口到比較報告，由左到右分成輸入、實驗、Jev 呼叫、輸出四塊。
 
-```
-datasets.split ─► experiments.run_baseline ─────────────────────────┐
-              ├─► experiments.run_jev   ─► jev_runner.ask_jev (快取) ├─► results/<task>.json ─► report ─► summary.md
-              └─► experiments.run_stack ─► stacking.run_stacking ────┘
-```
+![專案架構](docs/architecture.png)
+
+### 模組設計
+
+模組不是事先設計好的，而是照著實驗步驟長出來：每個步驟有自己的輸入與輸出，就對應一個模組。
+
+![實驗步驟對應模組](docs/module-design-steps.png)
+
+每多一個實驗想法（few-shot、分群挑範例、stacking）就多一個模組；最後把長到 376 行的 `run_benchmark.py`
+依「會因為什麼原因被修改」拆成 7 個模組。拆解時依循四個原則：
+
+1. **依修改原因切**：一個需求只動一個地方，例如改報告格式只動 `report.py`。
+2. **外部服務只走一道門**：只有 `jev_runner.py` 連到 API，快取、重試、並行只寫一次，測試時可以換成假 Jev。
+3. **依賴只往一個方向**：`cli → pipeline → experiments → few_shot / stacking → jev_runner / tasks → config`，沒有互相引用。
+4. **隱藏的概念變明確**：方法名稱集中在 `methods.py`，重複的抽樣邏輯合併成 `sample_per_label()`。
+
+重構後重跑完整實驗，所有請求都命中快取、沒有新的 API 呼叫，`summary.md` 和重構前完全相同。
+
+![模組演變與拆解原則](docs/module-design-evolution.png)
 
 官方 Python SDK 是 [`typesafe-sdk`](https://pypi.org/project/typesafe-sdk/)（`import typesafe_sdk`），
 不是 `typesafe` 或 `typesafe-ai`（後兩者分別是無關套件與防搶註的轉址套件）。
